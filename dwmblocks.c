@@ -59,8 +59,6 @@ static int returnStatus = 0;
 //opens process *cmd and stores output in *output
 void getcmd(const Block *block, char *output)
 {
-	if (block->signal)
-		*output++ = block->signal;
 	strcpy(output, block->icon);
 	FILE *cmdf = popen(block->command, "r");
 	if (!cmdf)
