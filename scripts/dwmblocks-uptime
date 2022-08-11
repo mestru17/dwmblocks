@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# TODO: 0 minute cases don't print any digit - i.e. 3 hours and 0 minutes becomes 3hm
+printf " %s" "$(uptime -p | awk -F " " '{ print $2"h"$4"m" }')"

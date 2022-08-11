@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+printf " %s" "$(amixer sget Master | awk -F "[][]" '/Left:/ {print $2}')"

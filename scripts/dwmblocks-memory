@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+printf " %s" "$(free -h | awk '/^Mem/ { print  $3"/"$2 }' | sed s/i//g)"
